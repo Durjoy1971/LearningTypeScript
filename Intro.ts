@@ -154,3 +154,33 @@ let myTypeUser: card = {
 };
 
 console.log(myTypeUser);
+
+// * Part - 05
+
+let score: number | string = 33;
+score = "thirth five";
+
+function myFunc(id: number | string): number | string {
+  if (typeof id === "number") return "Number";
+  else return id.length;
+}
+
+const data: (string | number)[] = ["1", 2, "3", 4];
+
+let seatAllotment: "front" | "middle" | "end";
+
+type Two = {
+  name: string;
+  price: number;
+};
+
+type Three = {
+  userName: string;
+};
+
+type Four = Two | Three;
+
+let MixedNumbers: Four = {
+  userName: "Durjoy",
+  price: 50,
+};
