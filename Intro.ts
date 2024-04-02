@@ -63,3 +63,94 @@ hero.map((index) => {
 function fail(msg: string): never {
   throw new Error(msg);
 }
+
+// * Part - 04
+
+function createUser({ names }: { names: string }) {
+  console.log(names);
+}
+createUser({ names: "Durjoy" });
+
+// ----------------------------------------------------
+
+function createUsers({ names, age }: { names: string; age: number }): {
+  names: string;
+  age: string;
+} {
+  return { names: names + " Barua", age: age + " Years Old" };
+}
+
+console.log(createUsers({ names: "Durjoy", age: 15 }));
+
+// ----------------------------------------------------
+
+let User = {
+  names: "Durjoy",
+  age: 16,
+  email: "S.com",
+};
+
+function withUsers({ names, age }: { names: string; age: number }): {
+  names: string;
+  age: string;
+} {
+  return { names: names + " Barua", age: age + " Years Old" };
+}
+
+console.log(withUsers(User));
+
+// ----------------------------------------------------
+
+type User = {
+  name: String;
+  age: number;
+};
+
+function createTypeUser(user: User) {
+  // instead of user, we can use {name,age}
+  console.log(user);
+  // console.log(name,age);
+}
+
+createTypeUser({ name: "Opy", age: 22 });
+
+// ----------------------------------------------------
+
+type One = {
+  readonly _id: string;
+  name: string;
+  isActive: boolean;
+};
+
+let nyUser: One = {
+  _id: "12",
+  name: "Durjoy",
+  isActive: true,
+};
+
+/* nyUser._id = "13" ! Can't be changed */
+
+nyUser.isActive = false;
+
+// ----------------------------------------------------
+
+type cardNumber = {
+  id: String;
+};
+
+type cardAmount = {
+  amount: number;
+};
+
+type card = cardNumber &
+  cardAmount & {
+    purchased: String;
+  };
+
+let myTypeUser: card = {
+  id: "Durjoy",
+  amount: 1200,
+  purchased: "10-12-2024",
+};
+
+console.log(myTypeUser);
