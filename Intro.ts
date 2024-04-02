@@ -11,4 +11,4 @@ let direct_flag = false;
 console.log(num, s, flag);
 console.log(direct_number, direct_string, direct_flag);
 
-//
+// Part - 02
