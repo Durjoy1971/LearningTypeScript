@@ -209,3 +209,14 @@ const userNewInterface: userInterface = {
   age: 1,
   isActive: false,
 };
+
+// * Part - 08: Private & Public
+
+class priUser {
+  constructor(public email: string, private name: string) {}
+}
+
+const DJ = new priUser("DK", "SL");
+
+console.log(DJ.email);
+// console.log(DJ.name); || Error
