@@ -195,3 +195,17 @@ const tupleColor: [number, number, number] = [255, 122, 120];
 type tupleObject = [number, string];
 
 const tupleNewObject: tupleObject = [112, "dalley"];
+
+// * Part - 07: Interface
+
+interface userInterface {
+  name: string;
+  age: number;
+  isActive: boolean;
+}
+
+const userNewInterface: userInterface = {
+  name: "D",
+  age: 1,
+  isActive: false,
+};
