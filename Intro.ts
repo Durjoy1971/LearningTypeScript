@@ -184,3 +184,14 @@ let MixedNumbers: Four = {
   userName: "Durjoy",
   price: 50,
 };
+
+// * Part - 06: Tuples
+
+let tupleUser: [string, number, boolean];
+tupleUser = ["true", 1100, false];
+
+const tupleColor: [number, number, number] = [255, 122, 120];
+
+type tupleObject = [number, string];
+
+const tupleNewObject: tupleObject = [112, "dalley"];
